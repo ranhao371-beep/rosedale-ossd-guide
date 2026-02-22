@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOH4M - Business Leadership | Rosedale OSSD Guide</title>
+  <style>
+    :root {
+      --primary: #1a3c6e;
+      --accent:  #e8412a;
+      --green:   #2e7d52;
+      --orange:  #d97706;
+      --purple:  #6d28d9;
+      --bg:      #f4f6fa;
+      --card:    #ffffff;
+      --text:    #1e2329;
+      --muted:   #6b7280;
+      --border:  #e5e7eb;
+      --radius:  12px;
+      --shadow:  0 2px 12px rgba(0,0,0,.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #2d5fa8 100%);
+      color: white;
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      gap: 16px;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon {
+      width: 40px; height: 40px;
+      background: white;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .logo-text { font-size: 18px; font-weight: 700; line-height: 1.2; }
+    .logo-sub { font-size: 11px; opacity: .75; font-weight: 400; }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,.85);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: all .2s;
+    }
+    .back-btn:hover { background: rgba(255,255,255,.15); color: white; }
+
+    /* ── Main ── */
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, var(--primary), #2d5fa8);
+      color: white;
+      border-radius: var(--radius);
+      padding: 40px;
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -40px; top: -40px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.06);
+    }
+    .hero h1 { font-size: 28px; margin-bottom: 6px; }
+    .hero .course-code-lg {
+      display: inline-block;
+      background: rgba(255,255,255,.2);
+      border: 1px solid rgba(255,255,255,.3);
+      padding: 3px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .hero p { font-size: 15px; opacity: .88; max-width: 680px; line-height: 1.7; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge {
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.3);
+      color: white;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* ── Overview Card ── */
+    .overview-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      margin-bottom: 28px;
+    }
+    .overview-card h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+    .overview-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .grade-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .grade-box {
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      border: 2px solid;
+    }
+    .grade-box.eval { border-color: #3b82f6; background: #eff6ff; }
+    .grade-box.isu { border-color: #8b5cf6; background: #f5f3ff; }
+    .grade-box.exam { border-color: #10b981; background: #f0fdf4; }
+    .grade-pct {
+      font-size: 28px;
+      font-weight: 800;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .grade-box.eval .grade-pct { color: #1d4ed8; }
+    .grade-box.isu .grade-pct { color: #6d28d9; }
+    .grade-box.exam .grade-pct { color: #065f46; }
+    .grade-label { font-size: 12px; font-weight: 600; color: var(--muted); }
+
+    /* ── Unit Section ── */
+    .unit-section {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .unit-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 20px 24px;
+      cursor: pointer;
+      transition: background .2s;
+      user-select: none;
+    }
+    .unit-header:hover { background: #f8fafc; }
+    .unit-num {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, var(--primary), #2d5fa8);
+      color: white;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 800;
+      flex-shrink: 0;
+    }
+    .unit-info { flex: 1; }
+    .unit-title { font-size: 17px; font-weight: 700; color: var(--primary); }
+    .unit-subtitle { font-size: 13px; color: var(--muted); margin-top: 2px; }
+    .unit-toggle {
+      font-size: 18px;
+      color: var(--muted);
+      transition: transform .3s;
+      flex-shrink: 0;
+    }
+    .unit-section.open .unit-toggle { transform: rotate(180deg); }
+    .unit-body {
+      display: none;
+      border-top: 1px solid var(--border);
+      padding: 0;
+    }
+    .unit-section.open .unit-body { display: block; }
+    .unit-intro {
+      padding: 16px 24px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--border);
+    }
+    .unit-objectives {
+      padding: 12px 24px 16px;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--border);
+    }
+    .unit-objectives h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .unit-objectives ul {
+      padding-left: 18px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .unit-objectives li { margin-bottom: 4px; }
+
+    /* ── Lesson Card ── */
+    .lesson-card {
+      border-bottom: 1px solid var(--border);
+      transition: background .2s;
+    }
+    .lesson-card:last-child { border-bottom: none; }
+    .lesson-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 24px;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .lesson-header:hover { background: #fafbfc; }
+    .lesson-num {
+      width: 28px; height: 28px;
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700;
+      flex-shrink: 0;
+    }
+    .lesson-num.test { background: var(--green); }
+    .lesson-num.review { background: var(--orange); }
+    .lesson-num.reflect { background: var(--purple); }
+    .lesson-num.project { background: #0891b2; }
+    .lesson-title { font-size: 14px; font-weight: 600; color: var(--text); flex: 1; }
+    .lesson-toggle {
+      font-size: 14px;
+      color: var(--muted);
+      transition: transform .3s;
+      flex-shrink: 0;
+    }
+    .lesson-card.open .lesson-toggle { transform: rotate(180deg); }
+    .lesson-body {
+      display: none;
+      padding: 0 24px 16px 64px;
+    }
+    .lesson-card.open .lesson-body { display: block; }
+
+    .lesson-quote {
+      font-style: italic;
+      font-size: 13px;
+      color: var(--primary);
+      padding: 10px 14px;
+      background: #eff6ff;
+      border-left: 3px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .lesson-quote .quote-author { font-style: normal; font-weight: 600; }
+    .lesson-intro {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .lesson-section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 12px;
+      margin-bottom: 6px;
+    }
+    .learning-goals {
+      padding-left: 18px;
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .learning-goals li { margin-bottom: 6px; }
+    .learning-goals li strong { color: var(--primary); }
+    .success-criteria {
+      padding-left: 18px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-top: 2px;
+      list-style-type: circle;
+    }
+    .success-criteria li { margin-bottom: 2px; }
+    .vocab-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .vocab-tag {
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+    .hots-box {
+      margin-top: 10px;
+      padding: 10px 14px;
+      background: #f5f3ff;
+      border-left: 3px solid var(--purple);
+      border-radius: 0 8px 8px 0;
+      font-size: 12px;
+      color: #4c1d95;
+      line-height: 1.6;
+    }
+    .hots-box strong { display: block; margin-bottom: 4px; font-size: 12px; }
+    .hots-box ul { padding-left: 16px; margin: 0; }
+    .hots-box li { margin-bottom: 2px; }
+
+    /* ── Test card style ── */
+    .test-info {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .test-info strong { color: var(--text); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .hero { padding: 24px; }
+      .hero h1 { font-size: 22px; }
+      .lesson-body { padding: 0 16px 16px 48px; }
+      .unit-header { padding: 16px; }
+      .lesson-header { padding: 12px 16px; }
+      .grade-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo" style="text-decoration:none;color:white;">
+      <div class="logo-icon">R</div>
+      <div>
+        <div class="logo-text">OSSD Guide</div>
+        <div class="logo-sub">Rosedale Global High School</div>
+      </div>
+    </a>
+    <a href="index.html" class="back-btn">&larr; Back to Guide</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <div class="hero">
+    <span class="course-code-lg">BOH4M</span>
+    <h1>Business Leadership: Management Fundamentals</h1>
+    <p>Grade 12, University/College Preparation &mdash; Explore leadership skills, management functions, ethics, and how to effectively lead people and organizations in the business world.</p>
+    <div class="badge-row">
+      <span class="badge">Unit 1: Foundations of Management</span>
+      <span class="badge">Unit 2: Leading</span>
+      <span class="badge">Unit 3: Management Challenges</span>
+      <span class="badge">Unit 4: Planning &amp; Controlling</span>
+      <span class="badge">Unit 5: Organizing</span>
+    </div>
+  </div>
+
+  <!-- Course Overview -->
+  <div class="overview-card">
+    <h2>Course Overview</h2>
+    <p>This business course focuses on the development of leadership skills used in managing a successful business. Students will analyse the role of a leader in business, with a focus on decision making, management of group dynamics, workplace stress and conflict, motivation of employees, and planning. Effective business communication skills, ethics, and social responsibility are also emphasized.</p>
+    <p>What is leadership? How do people effectively manage others? In this course, you will explore the development of leadership skills and how these skills are used to effectively manage people and companies. You will also understand how managers function within organizations and solve real world problems. Emphasis will be placed on the importance of ethics and social responsibility.</p>
+    <h2 style="margin-top:20px;">Grade Breakdown</h2>
+    <div class="grade-grid">
+      <div class="grade-box eval">
+        <span class="grade-pct">70%</span>
+        <span class="grade-label">Evaluation Activities<br>(60% Tests + 40% Assignments)</span>
+      </div>
+      <div class="grade-box isu">
+        <span class="grade-pct">10%</span>
+        <span class="grade-label">ISU<br>(Independent Study Unit)</span>
+      </div>
+      <div class="grade-box exam">
+        <span class="grade-pct">20%</span>
+        <span class="grade-label">Final Exam<br>(3 Hours, 100 Marks)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ Unit 1 ══════════════════ -->
+  <div class="unit-section open">
+    <div class="unit-header" onclick="toggleUnit(this)">
+      <div class="unit-num">1</div>
+      <div class="unit-info">
+        <div class="unit-title">Foundations of Management</div>
+        <div class="unit-subtitle">5 Lessons + Unit Highlights + Test</div>
+      </div>
+      <span class="unit-toggle">&#9660;</span>
+    </div>
+    <div class="unit-body">
+      <div class="unit-intro">Welcome to Unit 1. In this unit, we will be examining how businesses are organized. We will start by looking at trends that affect organizations and by assessing the role of management. Our skills focus for this unit will be on developing appropriate communication techniques specific to business management. You will use a variety of concepts and theories to develop business documents and presentations. Finally, in our ever-changing business world, we will evaluate the impact of ethics and social responsibility on company management.</div>
+      <div class="unit-objectives">
+        <h4>Overall Expectations / Learning Objectives:</h4>
+        <ul>
+          <li>Assess the role of management within an organization</li>
+          <li>Demonstrate the use of appropriate communication techniques related to business management</li>
+          <li>Evaluate the impact of issues related to ethics and social responsibility on organizational management</li>
+        </ul>
+      </div>
+
+      <!-- Lesson 1-1 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">1</div>
+          <div class="lesson-title">1-1: What's Happening in Business?</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-quote">"A business that makes nothing but money is a poor kind of business." <span class="quote-author">&mdash; Henry Ford</span></div>
+          <div class="lesson-intro">Businesses have changed significantly over the past 100 years, and for that matter, the way of doing business today is dramatically different than even 20 years ago. Technology has been one of the major drivers of the change taking place in businesses. As more sophisticated technology enables business to be conducted more effectively and at an ever-greater pace, it also has downsides &mdash; the number of scandals and ethical violations has also risen.</div>
+          <div class="lesson-section-title">Key Idea</div>
+          <p class="lesson-intro">This lesson will help you understand and appreciate the various ethical issues and challenges that are prevalent in the business world today. The way businesses deal with these issues affects not only them and their employees, but society at large.</p>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand major ethical issues</strong> facing businesses and their impact on society
+              <ul class="success-criteria">
+                <li>I can research major ethical issues facing businesses in today's world</li>
+                <li>I can summarize the major ethical issue in the scandal in one or two sentences</li>
+              </ul>
+            </li>
+            <li><strong>Understand ethics</strong> and how ethical dilemmas impact various stakeholders
+              <ul class="success-criteria">
+                <li>I can explain the meaning of ethics and what is considered ethical behaviour</li>
+                <li>I understand the difference between terminal and instrumental values</li>
+                <li>I can state and explain the four views of ethical behaviour</li>
+                <li>I understand the difference between cultural relativism and universalism</li>
+              </ul>
+            </li>
+            <li><strong>Understand ethical dilemmas</strong> in the workplace</li>
+            <li><strong>Use the ethical decision making model</strong> to make a decision in a variety of business scenarios</li>
+            <li><strong>Identify potential sources</strong> of ethical issues in the workplace</li>
+            <li><strong>Evaluate ethical dilemmas</strong> facing businesses using the ethical decision-making model</li>
+            <li><strong>Assess the role management plays</strong> in creating and dealing with ethical issues
+              <ul class="success-criteria">
+                <li>I can explain the meaning of a whistleblower</li>
+                <li>I can understand what a Code of Ethics is and the areas covered in it</li>
+              </ul>
+            </li>
+            <li><strong>Understand the process</strong> in responding to ethical issues (six steps or questions)</li>
+            <li><strong>Evaluate the impact</strong> of major ethical issues on management strategies and decision-making</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Scandal</span>
+            <span class="vocab-tag">Ethics</span>
+            <span class="vocab-tag">Ethical Behaviour</span>
+            <span class="vocab-tag">Ethical Dilemma</span>
+            <span class="vocab-tag">Whistleblower</span>
+            <span class="vocab-tag">Code of Ethics</span>
+          </div>
+          <div class="hots-box">
+            <strong>Higher Order Thinking Skills (HOTS)</strong>
+            <ul>
+              <li>Critically thinking about ethical dilemmas and ethical decision making</li>
+              <li>Communicate your understanding of the underlying ethical issues</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 1-2 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">2</div>
+          <div class="lesson-title">1-2: Management Fundamentals</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-quote">"Tend to the people, and they will tend to the business." <span class="quote-author">&mdash; John Maxwell</span></div>
+          <div class="lesson-intro">Managers play an integral role in any organization. In this lesson, we will understand the fundamentals of management that are important for business success &mdash; the types of managers, the levels of management, and the functions of management.</div>
+          <div class="lesson-section-title">Key Idea</div>
+          <p class="lesson-intro">Understand basic aspects of management. Once we grasp these concepts, we will explore organizations, their characteristics, and features. We will conclude by examining the roles and responsibilities of managers within organizations.</p>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Explain the functions of management</strong> in an organization
+              <ul class="success-criteria">
+                <li>I can explain the five functions of management</li>
+                <li>I can give an example of each function of management</li>
+                <li>I can identify the different tasks under each function</li>
+              </ul>
+            </li>
+            <li><strong>Understand the roles and responsibilities</strong> at each level of management
+              <ul class="success-criteria">
+                <li>I can explain the three levels of managers in an organization</li>
+              </ul>
+            </li>
+            <li><strong>Identify the different types of managers</strong> that exist within organizations</li>
+            <li><strong>Apply the three characteristics</strong> of an organization to real examples
+              <ul class="success-criteria">
+                <li>I can explain Purpose, Division of Labour, and Hierarchy of Authority</li>
+              </ul>
+            </li>
+            <li><strong>Evaluate and explain the role</strong> managers play within organizations
+              <ul class="success-criteria">
+                <li>I can explain the main managerial skills</li>
+                <li>I can evaluate the roles managers play in organizations</li>
+              </ul>
+            </li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Management</span>
+            <span class="vocab-tag">Administrator</span>
+            <span class="vocab-tag">Functional Manager</span>
+            <span class="vocab-tag">General Manager</span>
+            <span class="vocab-tag">Line Manager</span>
+            <span class="vocab-tag">Staff Manager</span>
+            <span class="vocab-tag">Organization</span>
+            <span class="vocab-tag">Division of Labour</span>
+            <span class="vocab-tag">Hierarchy of Authority</span>
+          </div>
+          <div class="hots-box">
+            <strong>Higher Order Thinking Skills (HOTS)</strong>
+            <ul>
+              <li>Critical thinking of the role managers play in organizations</li>
+              <li>Apply management characteristics to real world organizations</li>
+              <li>Analyze the functions of management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 1-3 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">3</div>
+          <div class="lesson-title">1-3: Management Theories &amp; Corporate Culture</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-quote">"My job is not to be easy on people. My job is to take these great people we have and to push them and make them even better." <span class="quote-author">&mdash; Steve Jobs</span></div>
+          <div class="lesson-intro">Managers play many roles within organizations. How each unique management style is integrated into a larger management structure is unique to each organization. All businesses have their own corporate culture and part of the corporate culture is set by the top managers and the styles that they employ.</div>
+          <div class="lesson-section-title">Key Idea</div>
+          <p class="lesson-intro">Explore how management and organization come together to create unique corporate cultures. We will also explore how managers can influence the culture of an organization with their management style.</p>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand corporate culture</strong> and its role in how a business functions
+              <ul class="success-criteria">
+                <li>I understand the definition of corporate culture</li>
+                <li>I can provide at least three ingredients in corporate culture</li>
+                <li>I can provide real world examples of corporate culture</li>
+              </ul>
+            </li>
+            <li><strong>Explain how corporate culture</strong> affects organizations
+              <ul class="success-criteria">
+                <li>I can explain and give an example of at least four features of corporate culture</li>
+                <li>I can identify different types of corporate culture in different organizations</li>
+              </ul>
+            </li>
+            <li><strong>Evaluate major management theories</strong> and practices
+              <ul class="success-criteria">
+                <li>I understand the six major theories of management</li>
+                <li>I can explain scientific, administrative, behavioural, and organizational environment management</li>
+              </ul>
+            </li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Corporate Culture</span>
+            <span class="vocab-tag">Scientific Management</span>
+            <span class="vocab-tag">Administrative Management</span>
+            <span class="vocab-tag">Behavioural Management</span>
+          </div>
+          <div class="hots-box">
+            <strong>Higher Order Thinking Skills (HOTS)</strong>
+            <ul>
+              <li>Assessing corporate culture of organizations</li>
+              <li>Evaluate and assess management styles and theories of real businesses</li>
+              <li>Analyze the influence of management on corporate culture</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 1-4 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">4</div>
+          <div class="lesson-title">1-4: Ethics &amp; Social Responsibility</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-quote">"Real integrity is doing the right thing, knowing that nobody's going to know whether you did it or not." <span class="quote-author">&mdash; Oprah Winfrey</span></div>
+          <div class="lesson-intro">Ethical scandals have generated a consistent amount of media attention. Management and corporate culture have played critical roles in the failure of organizations to make ethical decisions. It is ever more important for managers to have a solid grounding in ethics and corporate social responsibility.</div>
+          <div class="lesson-section-title">Key Idea</div>
+          <p class="lesson-intro">Explore historical business scandals and deconstruct the underlying ethical issues. Learn the six factors for responding to ethical situations. Understand how companies set higher ethical standards through Corporate Social Responsibility (CSR).</p>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Explore the ten worst scandals</strong> in the business world</li>
+            <li><strong>Explain the nature of corporate ethical</strong> and social responsibility
+              <ul class="success-criteria">
+                <li>I can define CSR</li>
+                <li>I can explain the two views on CSR</li>
+                <li>I understand the four different strategies of CSR</li>
+              </ul>
+            </li>
+            <li><strong>Demonstrate appropriate techniques</strong> for making group and individual presentations</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">CSR</span>
+            <span class="vocab-tag">Corporate Social Responsibility</span>
+            <span class="vocab-tag">Stakeholder</span>
+            <span class="vocab-tag">Business Scandal</span>
+          </div>
+          <div class="hots-box">
+            <strong>Higher Order Thinking Skills (HOTS)</strong>
+            <ul>
+              <li>Critical analysis of business scandals</li>
+              <li>Evaluate and apply the six step process to ethical issues</li>
+              <li>Application of CSR to real life business operations</li>
+              <li>Develop effective business presentation skills</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 1-5 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">5</div>
+          <div class="lesson-title">1-5: Business Communication</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Communication is key to success in business, especially for organizational leaders. However, many leaders fail to communicate effectively. In this lesson, you will learn how to communicate effectively and how communication has changed from largely face-to-face to electronic means.</div>
+          <div class="lesson-section-title">Key Idea</div>
+          <p class="lesson-intro">Explore various business communication techniques and etiquette. Learn the fundamentals of business communication that you will need as you become part of the business world.</p>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Demonstrate effective use</strong> of information and communication technology</li>
+            <li><strong>Use proper business vocabulary</strong> in oral and written communication</li>
+            <li><strong>Demonstrate effective use</strong> of business communication documents</li>
+            <li><strong>Explain the influence of technology</strong> on business communication
+              <ul class="success-criteria">
+                <li>I understand the trend in the increased use of social media in business</li>
+                <li>I can give three reasons why businesses do not want employees to use social media at work</li>
+                <li>I can explain three pros and three cons of social media in the workplace</li>
+              </ul>
+            </li>
+          </ol>
+          <div class="hots-box">
+            <strong>Higher Order Thinking Skills (HOTS)</strong>
+            <ul>
+              <li>Develop business communication skills</li>
+              <li>Critically think about the influence of technology on business communication</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unit 1 Highlights -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num review">R</div>
+          <div class="lesson-title">1-6: Unit 1 Highlights (Review)</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Summarizes the main concepts from all Unit 1 lessons. Use this page to check if you understand all concepts and prepare for the unit test.</div>
+          <div class="lesson-section-title">1-1 Key Concepts: Business Ethics &amp; Ethical Behaviour</div>
+          <ul class="learning-goals">
+            <li>Review how <strong>scandals</strong> impact society (e.g. Equifax data breach)</li>
+            <li>Understand the <strong>four views of ethical behaviour</strong>: Utilitarian, Individualism, Moral-Rights, Justice</li>
+            <li>Explain <strong>ethical principles</strong>, <strong>ethical dilemmas</strong>, and the <strong>ethical decision-making model</strong></li>
+            <li>Understand the <strong>six factors</strong> for responding to ethical issues: Facts, Issues, Harm, Choices, Consequences, Action</li>
+          </ul>
+          <div class="lesson-section-title">1-2 Key Concepts: Managers &amp; Management</div>
+          <ul class="learning-goals">
+            <li>Five <strong>functions of management</strong>: Planning, Organizing, Leading, Controlling, Staffing</li>
+            <li>Three <strong>levels of management</strong> and three <strong>characteristics of an organization</strong></li>
+            <li><strong>Katz Essential Managerial Skills</strong> and <strong>Mintzberg's management roles</strong></li>
+          </ul>
+          <div class="lesson-section-title">1-3 Key Concepts: Corporate Culture &amp; Management Theories</div>
+          <ul class="learning-goals">
+            <li>Corporate culture definition, ingredients, and real-world examples</li>
+            <li>Six major management theories and their application</li>
+          </ul>
+          <div class="lesson-section-title">1-4 Key Concepts: Ethics &amp; CSR</div>
+          <ul class="learning-goals">
+            <li>Ten worst business scandals and their ethical implications</li>
+            <li>CSR strategies and ethical responsibility frameworks</li>
+          </ul>
+          <div class="lesson-section-title">1-5 Key Concepts: Business Communication</div>
+          <ul class="learning-goals">
+            <li>Technology impact on workplace communication</li>
+            <li>Business communication etiquette and social media in business</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Unit 1 Test -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num test">T</div>
+          <div class="lesson-title">1-8: Unit 1 Test</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="test-info">
+            <p><strong>Test Overview:</strong> This test is designed to be completed in 60-90 minutes. The test will remain open for 2 hours.</p>
+            <p>Remember to read the questions carefully and be sure to check your work before pressing submit. Do not leave any questions blank.</p>
+            <p>All responses will be graded according to the <strong>KICA Achievement Chart</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ Unit 2 ══════════════════ -->
+  <div class="unit-section">
+    <div class="unit-header" onclick="toggleUnit(this)">
+      <div class="unit-num">2</div>
+      <div class="unit-info">
+        <div class="unit-title">Leading</div>
+        <div class="unit-subtitle">4 Lessons + Reflection + Unit Highlights + Test</div>
+      </div>
+      <span class="unit-toggle">&#9660;</span>
+    </div>
+    <div class="unit-body">
+      <div class="unit-intro">Welcome to Unit 2 &mdash; Leading. What is leadership? What makes some leaders more effective than others? How can leaders make teams work more productively? We begin by exploring the characteristics and skills of leaders, then explore human behaviour and group dynamics. You will also investigate your own leadership skills and styles.</div>
+      <div class="unit-objectives">
+        <h4>Overall Expectations / Learning Objectives:</h4>
+        <ul>
+          <li>Demonstrate an understanding of human behaviour and how it contributes to functional and successful groups and teams</li>
+          <li>Demonstrate an understanding of group dynamics</li>
+          <li>Demonstrate an understanding of proper leadership techniques in a variety of situations</li>
+        </ul>
+      </div>
+
+      <!-- Lesson 2-1 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">1</div>
+          <div class="lesson-title">2-1: What is Leadership?</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Explore the characteristics and skills that define effective leaders. Understand the attributes that make leaders successful and how leadership differs from management.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Define leadership</strong> and distinguish it from management</li>
+            <li><strong>Identify key leadership characteristics</strong> and skills</li>
+            <li><strong>Evaluate different leadership approaches</strong> in real-world contexts</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Leadership</span>
+            <span class="vocab-tag">Leader</span>
+            <span class="vocab-tag">Leadership Characteristics</span>
+            <span class="vocab-tag">Leadership Skills</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 2-2 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">2</div>
+          <div class="lesson-title">2-2: Understanding Human Behaviour</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Explore human behaviour in the workplace to understand what drives people, how they interact in groups, and how leaders can better understand and work with different personalities and motivations.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand human behaviour</strong> and its impact on organizations</li>
+            <li><strong>Explore motivation theories</strong> that explain workplace behaviour</li>
+            <li><strong>Analyze how leaders</strong> can leverage understanding of human behaviour</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Human Behaviour</span>
+            <span class="vocab-tag">Motivation</span>
+            <span class="vocab-tag">Personality</span>
+            <span class="vocab-tag">Perception</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reflection 1 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num reflect">R</div>
+          <div class="lesson-title">Reflection 1</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">A reflective activity where you assess your own leadership skills and understanding of concepts covered so far. This is an opportunity to consolidate your learning from Units 1 and 2.</div>
+        </div>
+      </div>
+
+      <!-- Lesson 2-3 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">3</div>
+          <div class="lesson-title">2-3: Leadership Theories &amp; Styles</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Investigate various leadership theories and styles. Understand how different theories explain leadership effectiveness and how leaders adapt their style to different situations.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand major leadership theories</strong> (trait, behavioural, contingency, transformational)</li>
+            <li><strong>Identify different leadership styles</strong> and their applications</li>
+            <li><strong>Evaluate which leadership style</strong> is most effective in different situations</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Trait Theory</span>
+            <span class="vocab-tag">Behavioural Theory</span>
+            <span class="vocab-tag">Contingency Theory</span>
+            <span class="vocab-tag">Transformational Leadership</span>
+            <span class="vocab-tag">Autocratic</span>
+            <span class="vocab-tag">Democratic</span>
+            <span class="vocab-tag">Laissez-faire</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 2-4 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">4</div>
+          <div class="lesson-title">2-4: Group Dynamics</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Explore teamwork techniques that can be used in building functional and successful teams. Understand how groups form, develop, and sometimes fail, and how leaders can facilitate productive group dynamics.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand group dynamics</strong> and how groups form and develop</li>
+            <li><strong>Identify factors</strong> that contribute to effective team performance</li>
+            <li><strong>Apply teamwork techniques</strong> to build functional and successful teams</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Group Dynamics</span>
+            <span class="vocab-tag">Team Building</span>
+            <span class="vocab-tag">Forming</span>
+            <span class="vocab-tag">Storming</span>
+            <span class="vocab-tag">Norming</span>
+            <span class="vocab-tag">Performing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unit 2 Test -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num test">T</div>
+          <div class="lesson-title">2-7: Unit 2 Test</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="test-info">
+            <p><strong>Test Overview:</strong> This test is designed to be completed in 60-90 minutes. Covers all Unit 2 material including leadership, human behaviour, leadership theories, and group dynamics.</p>
+            <p>All responses will be graded according to the <strong>KICA Achievement Chart</strong>.</p>
+            <p><strong>Note:</strong> At the end of Unit 2, midterm report cards will be issued.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ Unit 3 ══════════════════ -->
+  <div class="unit-section">
+    <div class="unit-header" onclick="toggleUnit(this)">
+      <div class="unit-num">3</div>
+      <div class="unit-info">
+        <div class="unit-title">Management Challenges</div>
+        <div class="unit-subtitle">5 Lessons + Case Study + Unit Highlights + Test</div>
+      </div>
+      <span class="unit-toggle">&#9660;</span>
+    </div>
+    <div class="unit-body">
+      <div class="unit-intro">In this unit, we explore the major challenges that managers face in the workplace. From communication breakdowns to workplace stress, conflict, and motivation issues, leaders must navigate complex interpersonal dynamics to maintain a productive work environment.</div>
+      <div class="unit-objectives">
+        <h4>Overall Expectations / Learning Objectives:</h4>
+        <ul>
+          <li>Analyze the communication process and its impact on management effectiveness</li>
+          <li>Evaluate strategies for managing workplace stress and conflict</li>
+          <li>Demonstrate an understanding of motivation theories and their application</li>
+        </ul>
+      </div>
+
+      <!-- Lesson 3-1 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">1</div>
+          <div class="lesson-title">3-1: The Communication Process</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Explore the communication process in organizational settings. Understand how effective communication flows within an organization and what barriers can prevent clear communication between managers and employees.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand the communication process</strong> model (sender, message, channel, receiver, feedback)</li>
+            <li><strong>Identify barriers</strong> to effective communication in organizations</li>
+            <li><strong>Analyze communication strategies</strong> used by managers</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Communication Process</span>
+            <span class="vocab-tag">Sender</span>
+            <span class="vocab-tag">Receiver</span>
+            <span class="vocab-tag">Feedback</span>
+            <span class="vocab-tag">Noise</span>
+            <span class="vocab-tag">Channel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 3-2 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">2</div>
+          <div class="lesson-title">3-2: Stressing &amp; De-Stressing</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Examine workplace stress &mdash; its causes, effects, and management strategies. Learn how managers can identify stress in their teams and implement effective de-stressing strategies.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand workplace stress</strong> and its causes</li>
+            <li><strong>Identify the effects</strong> of stress on individuals and organizations</li>
+            <li><strong>Evaluate strategies</strong> for managing and reducing workplace stress</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Stress</span>
+            <span class="vocab-tag">Stressors</span>
+            <span class="vocab-tag">Burnout</span>
+            <span class="vocab-tag">Work-Life Balance</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 3-3 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">3</div>
+          <div class="lesson-title">3-3: Conflict &amp; Its Management</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Explore the nature of conflict in the workplace, its types and sources, and strategies that managers can use to resolve conflicts constructively.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand the types and sources</strong> of workplace conflict</li>
+            <li><strong>Evaluate conflict resolution strategies</strong> and when to apply them</li>
+            <li><strong>Demonstrate effective techniques</strong> for managing conflict in organizations</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Conflict</span>
+            <span class="vocab-tag">Conflict Resolution</span>
+            <span class="vocab-tag">Negotiation</span>
+            <span class="vocab-tag">Mediation</span>
+            <span class="vocab-tag">Arbitration</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 3-4 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">4</div>
+          <div class="lesson-title">3-4: Motivation</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Dive deep into motivation theories and understand how managers can motivate their teams for higher performance. Explore both intrinsic and extrinsic motivation and apply major motivation theories to real business scenarios.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand major motivation theories</strong> (Maslow, Herzberg, McGregor, etc.)</li>
+            <li><strong>Differentiate between intrinsic and extrinsic</strong> motivation</li>
+            <li><strong>Apply motivation theories</strong> to real-world management scenarios</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Motivation</span>
+            <span class="vocab-tag">Maslow's Hierarchy</span>
+            <span class="vocab-tag">Herzberg's Two-Factor Theory</span>
+            <span class="vocab-tag">McGregor's Theory X/Y</span>
+            <span class="vocab-tag">Intrinsic Motivation</span>
+            <span class="vocab-tag">Extrinsic Motivation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 3-5 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">5</div>
+          <div class="lesson-title">3-5: Motivation Case Study</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Apply your understanding of motivation theories to analyze a real-world case study. This is a summative assignment where you demonstrate your ability to connect theory to practice.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Apply motivation theories</strong> to a real business case</li>
+            <li><strong>Analyze the effectiveness</strong> of different motivational strategies</li>
+            <li><strong>Recommend solutions</strong> based on theoretical frameworks</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Unit 3 Test -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num test">T</div>
+          <div class="lesson-title">Unit 3 Test</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="test-info">
+            <p><strong>Test Overview:</strong> This test covers all Unit 3 material including communication processes, stress management, conflict resolution, and motivation theories.</p>
+            <p>All responses will be graded according to the <strong>KICA Achievement Chart</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ Unit 4 ══════════════════ -->
+  <div class="unit-section">
+    <div class="unit-header" onclick="toggleUnit(this)">
+      <div class="unit-num">4</div>
+      <div class="unit-info">
+        <div class="unit-title">Planning &amp; Controlling</div>
+        <div class="unit-subtitle">6 Lessons + Unit Highlights + Test</div>
+      </div>
+      <span class="unit-toggle">&#9660;</span>
+    </div>
+    <div class="unit-body">
+      <div class="unit-intro">In this unit, we explore the critical management functions of planning and controlling. Effective managers must be able to create strategic plans, use planning tools, manage change, and implement control systems to ensure organizational goals are met.</div>
+      <div class="unit-objectives">
+        <h4>Overall Expectations / Learning Objectives:</h4>
+        <ul>
+          <li>Demonstrate an understanding of the importance and process of planning</li>
+          <li>Analyze strategic planning techniques and their application</li>
+          <li>Evaluate control processes and systems in organizations</li>
+        </ul>
+      </div>
+
+      <!-- Lesson 4-1 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">1</div>
+          <div class="lesson-title">4-1: The Importance of Planning</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Understand why planning is essential for organizational success. Explore the different types of plans that organizations use and how the planning process works at different levels of management.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Explain the importance</strong> of planning in organizations</li>
+            <li><strong>Identify different types of plans</strong> (strategic, tactical, operational)</li>
+            <li><strong>Understand the planning process</strong> and its stages</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Planning</span>
+            <span class="vocab-tag">Strategic Plan</span>
+            <span class="vocab-tag">Tactical Plan</span>
+            <span class="vocab-tag">Operational Plan</span>
+            <span class="vocab-tag">Goals</span>
+            <span class="vocab-tag">Objectives</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 4-2 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">2</div>
+          <div class="lesson-title">4-2: Planning Tools &amp; Techniques</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Learn about the tools and techniques that managers use to create effective plans. From SWOT analysis to Gantt charts and budgeting, these tools help managers organize and implement their plans.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Use SWOT analysis</strong> to evaluate organizational strengths and weaknesses</li>
+            <li><strong>Apply planning tools</strong> such as Gantt charts, budgets, and schedules</li>
+            <li><strong>Evaluate the effectiveness</strong> of different planning techniques</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">SWOT Analysis</span>
+            <span class="vocab-tag">Gantt Chart</span>
+            <span class="vocab-tag">Budget</span>
+            <span class="vocab-tag">Forecasting</span>
+            <span class="vocab-tag">Benchmarking</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 4-3 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">3</div>
+          <div class="lesson-title">4-3: Strategic Planning</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Explore strategic planning at the highest level of management. Understand how organizations define their vision, mission, and long-term strategic goals, and how strategic analysis informs decision-making.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand the strategic planning process</strong></li>
+            <li><strong>Define and differentiate</strong> vision, mission, and values statements</li>
+            <li><strong>Analyze strategic planning frameworks</strong> used by real organizations</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Vision Statement</span>
+            <span class="vocab-tag">Mission Statement</span>
+            <span class="vocab-tag">Strategic Analysis</span>
+            <span class="vocab-tag">Competitive Advantage</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 4-4 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">4</div>
+          <div class="lesson-title">4-4: Analyzing Organization's Strategic Plans</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Apply your understanding of strategic planning by analyzing real organizations' strategic plans. Evaluate how well their plans align with their vision, mission, and competitive environment.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Analyze real strategic plans</strong> from actual organizations</li>
+            <li><strong>Evaluate alignment</strong> between strategy and organizational goals</li>
+            <li><strong>Identify strengths and weaknesses</strong> in strategic plans</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Lesson 4-5 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">5</div>
+          <div class="lesson-title">4-5: Planning for Change</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Understand change management and how organizations plan for and adapt to change. Learn about resistance to change and strategies for implementing change effectively.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand the nature of organizational change</strong></li>
+            <li><strong>Identify sources of resistance</strong> to change</li>
+            <li><strong>Evaluate change management strategies</strong> and their effectiveness</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Change Management</span>
+            <span class="vocab-tag">Resistance to Change</span>
+            <span class="vocab-tag">Innovation</span>
+            <span class="vocab-tag">Adaptation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 4-6 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">6</div>
+          <div class="lesson-title">4-6: Control Processes &amp; System</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Explore the management function of controlling. Learn how managers monitor performance, compare results against standards, and take corrective action to ensure organizational goals are achieved.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand the control process</strong> (standards, measurement, comparison, correction)</li>
+            <li><strong>Identify types of control systems</strong> (feedforward, concurrent, feedback)</li>
+            <li><strong>Evaluate the effectiveness</strong> of control mechanisms in organizations</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Control Process</span>
+            <span class="vocab-tag">Standards</span>
+            <span class="vocab-tag">Performance Measurement</span>
+            <span class="vocab-tag">Corrective Action</span>
+            <span class="vocab-tag">Feedforward Control</span>
+            <span class="vocab-tag">Feedback Control</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unit 4 Test -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num test">T</div>
+          <div class="lesson-title">Unit 4 Test</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="test-info">
+            <p><strong>Test Overview:</strong> This test covers all Unit 4 material including planning, strategic planning, change management, and control processes.</p>
+            <p>All responses will be graded according to the <strong>KICA Achievement Chart</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ Unit 5 ══════════════════ -->
+  <div class="unit-section">
+    <div class="unit-header" onclick="toggleUnit(this)">
+      <div class="unit-num">5</div>
+      <div class="unit-info">
+        <div class="unit-title">Organizing</div>
+        <div class="unit-subtitle">6 Lessons + Unit Highlights + Test</div>
+      </div>
+      <span class="unit-toggle">&#9660;</span>
+    </div>
+    <div class="unit-body">
+      <div class="unit-intro">In this final unit, we explore the management function of organizing. Learn how organizations are structured, how work environments are designed, and how human resources are managed to achieve organizational objectives.</div>
+      <div class="unit-objectives">
+        <h4>Overall Expectations / Learning Objectives:</h4>
+        <ul>
+          <li>Analyze different organizational structures and their effectiveness</li>
+          <li>Evaluate organizational design principles and work environment strategies</li>
+          <li>Demonstrate an understanding of human resource management processes</li>
+        </ul>
+      </div>
+
+      <!-- Lesson 5-1 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">1</div>
+          <div class="lesson-title">5-1: Organizational Structures</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Explore the different types of organizational structures that businesses use. Understand how the structure of an organization affects communication, decision-making, and overall effectiveness.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Identify types of organizational structures</strong> (functional, divisional, matrix, flat)</li>
+            <li><strong>Analyze the advantages and disadvantages</strong> of each structure</li>
+            <li><strong>Evaluate which structure</strong> best fits different types of organizations</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Organizational Structure</span>
+            <span class="vocab-tag">Functional Structure</span>
+            <span class="vocab-tag">Divisional Structure</span>
+            <span class="vocab-tag">Matrix Structure</span>
+            <span class="vocab-tag">Flat Organization</span>
+            <span class="vocab-tag">Chain of Command</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 5-2 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">2</div>
+          <div class="lesson-title">5-2: Organizational Design</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Learn about the principles of organizational design and how managers create effective organizational frameworks. Understand centralization vs. decentralization, span of control, and formalization.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand organizational design principles</strong></li>
+            <li><strong>Compare centralized and decentralized</strong> organizational designs</li>
+            <li><strong>Evaluate the impact</strong> of organizational design on performance</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Organizational Design</span>
+            <span class="vocab-tag">Centralization</span>
+            <span class="vocab-tag">Decentralization</span>
+            <span class="vocab-tag">Span of Control</span>
+            <span class="vocab-tag">Formalization</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 5-3 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">3</div>
+          <div class="lesson-title">5-3: Organizing the Work Environment</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Explore how the physical and cultural work environment impacts employee productivity and satisfaction. Learn about workplace design trends and how managers can create an optimal work environment.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand the impact</strong> of work environment on productivity</li>
+            <li><strong>Evaluate workplace design strategies</strong> and trends</li>
+            <li><strong>Analyze how managers</strong> can optimize the work environment</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Work Environment</span>
+            <span class="vocab-tag">Workplace Design</span>
+            <span class="vocab-tag">Ergonomics</span>
+            <span class="vocab-tag">Employee Satisfaction</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 5-4 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">4</div>
+          <div class="lesson-title">5-4: Human Resource Process</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Explore the human resource management process from recruitment to training and development. Understand how organizations attract, select, and develop talent to meet their goals.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand the HR process</strong> (planning, recruiting, selecting, training)</li>
+            <li><strong>Evaluate recruitment and selection</strong> strategies</li>
+            <li><strong>Analyze training and development</strong> programs in organizations</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Human Resources</span>
+            <span class="vocab-tag">Recruitment</span>
+            <span class="vocab-tag">Selection</span>
+            <span class="vocab-tag">Training</span>
+            <span class="vocab-tag">Development</span>
+            <span class="vocab-tag">Onboarding</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 5-5 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">5</div>
+          <div class="lesson-title">5-5: Human Resource Strategies</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Learn about strategic human resource management and how HR strategies align with organizational goals. Explore compensation, benefits, employee relations, and workforce planning.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand strategic HR management</strong> and its alignment with business goals</li>
+            <li><strong>Evaluate compensation and benefits</strong> strategies</li>
+            <li><strong>Analyze employee relations</strong> and workforce planning</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Compensation</span>
+            <span class="vocab-tag">Benefits</span>
+            <span class="vocab-tag">Employee Relations</span>
+            <span class="vocab-tag">Workforce Planning</span>
+            <span class="vocab-tag">Retention</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson 5-6 -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num">6</div>
+          <div class="lesson-title">5-6: Performance Appraisals</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">Learn about performance appraisal systems and how organizations evaluate employee performance. Understand different appraisal methods and how feedback contributes to employee development.</div>
+          <div class="lesson-section-title">Learning Goals</div>
+          <ol class="learning-goals">
+            <li><strong>Understand the purpose</strong> of performance appraisals</li>
+            <li><strong>Identify different appraisal methods</strong> and their strengths/weaknesses</li>
+            <li><strong>Evaluate how performance feedback</strong> contributes to employee development</li>
+          </ol>
+          <div class="vocab-box">
+            <span class="vocab-tag">Performance Appraisal</span>
+            <span class="vocab-tag">360-Degree Feedback</span>
+            <span class="vocab-tag">Performance Review</span>
+            <span class="vocab-tag">KPIs</span>
+            <span class="vocab-tag">Employee Development</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unit 5 Test -->
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num test">T</div>
+          <div class="lesson-title">Unit 5 Test</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="test-info">
+            <p><strong>Test Overview:</strong> This test covers all Unit 5 material including organizational structures, design, work environment, and human resource management.</p>
+            <p>All responses will be graded according to the <strong>KICA Achievement Chart</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ Final Project ══════════════════ -->
+  <div class="unit-section">
+    <div class="unit-header" onclick="toggleUnit(this)">
+      <div class="unit-num" style="background:linear-gradient(135deg, #0891b2, #06b6d4);">F</div>
+      <div class="unit-info">
+        <div class="unit-title">Final Project &amp; Exam</div>
+        <div class="unit-subtitle">ISU (10%) + Final Exam (20%)</div>
+      </div>
+      <span class="unit-toggle">&#9660;</span>
+    </div>
+    <div class="unit-body">
+      <div class="unit-intro">The culminating activities for this course include an Independent Study Unit (ISU) and a Final Exam. Together, these account for 30% of your final grade.</div>
+
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num project">A</div>
+          <div class="lesson-title">ISU &mdash; Independent Study Unit (10%)</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="lesson-intro">The Independent Study Unit is a comprehensive project that allows you to apply the management and leadership concepts you have learned throughout the course to a real-world business scenario.</div>
+        </div>
+      </div>
+
+      <div class="lesson-card">
+        <div class="lesson-header" onclick="toggleLesson(this)">
+          <div class="lesson-num test">E</div>
+          <div class="lesson-title">Final Exam (20%)</div>
+          <span class="lesson-toggle">&#9660;</span>
+        </div>
+        <div class="lesson-body">
+          <div class="test-info">
+            <p><strong>Total time:</strong> 3 Hours &nbsp;|&nbsp; <strong>Marks:</strong> 100</p>
+            <p>Upon successful completion of all activities, you will need to schedule your final exam by contacting the school. The school registrar will confirm your eligibility and provide further details.</p>
+            <p><strong>Eligibility criteria:</strong></p>
+            <ul style="padding-left:18px;font-size:13px;margin-top:6px;">
+              <li>Completing all course requirements (assignments, quizzes, tests, active participation)</li>
+              <li>Completion of your course Learning Log</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>Rosedale Global High School &mdash; OSSD Student Guide | BOH4M Course Detail</p>
+</footer>
+
+<script>
+function toggleUnit(header) {
+  const section = header.closest('.unit-section');
+  section.classList.toggle('open');
+}
+function toggleLesson(header) {
+  const card = header.closest('.lesson-card');
+  card.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
