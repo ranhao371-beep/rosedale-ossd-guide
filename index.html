@@ -549,6 +549,31 @@
       padding: 3px 10px;
       font-size: 11px; font-weight: 600;
     }
+    .course-detail { margin-top: 12px; }
+    .course-detail-desc {
+      font-size: 12px; color: var(--text); line-height: 1.6;
+      padding: 10px 14px; background: #f8fafc; border-radius: 8px;
+      border-left: 3px solid #3b82f6; margin-bottom: 12px;
+    }
+    .unit-detail-list { display: flex; flex-direction: column; gap: 8px; }
+    .unit-detail-item {
+      border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px;
+      background: var(--card);
+    }
+    .unit-detail-title {
+      font-weight: 700; font-size: 13px; color: var(--accent);
+      margin-bottom: 6px; display: flex; align-items: center; gap: 6px;
+    }
+    .unit-detail-title .unit-num {
+      background: var(--accent); color: #fff; border-radius: 50%;
+      width: 20px; height: 20px; display: inline-flex; align-items: center;
+      justify-content: center; font-size: 11px; flex-shrink: 0;
+    }
+    .unit-lesson-list {
+      display: flex; flex-wrap: wrap; gap: 4px 8px;
+      font-size: 11px; color: var(--muted);
+    }
+    .unit-lesson-list span::before { content: "• "; color: #94a3b8; }
 
     /* ── Skill Modules ── */
     .skill-module {
@@ -2134,6 +2159,27 @@
           <div class="course-units">
             <div class="course-desc">扩展数学知识与技能，解决涉及各类函数的复杂问题，为微积分学习做准备。</div>
             <div class="unit-tags"><span class="unit-tag">多项式与有理函数</span><span class="unit-tag">三角函数</span><span class="unit-tag">指数与对数函数</span><span class="unit-tag">函数特性</span></div>
+            <div class="course-detail">
+              <div class="course-detail-desc">The Grade 12 university preparation course Advanced Functions (MHF4U) satisfies the mathematical prerequisite for some universities in areas that include business, social science, engineering, pure mathematics, computer science, physical sciences and health science programs. Students deepen their understanding of functions by revisiting exponential and trigonometric functions, exploring polynomial and rational functions, and examining rates of change and methods of combining functions.</div>
+              <div class="unit-detail-list">
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">1</span> Polynomial &amp; Rational Functions</div>
+                  <div class="unit-lesson-list"><span>Power Functions</span><span>Characteristics &amp; Graphs</span><span>Transformations</span><span>Dividing Polynomials</span><span>Remainder &amp; Factor Theorems</span><span>Polynomial Equations &amp; Inequalities</span><span>Graphs of Reciprocal Functions</span><span>Graphs of Rational Functions</span><span>Rational Equations &amp; Inequalities</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">2</span> Trigonometric Functions</div>
+                  <div class="unit-lesson-list"><span>Radian Measure and Special Triangles</span><span>Equivalent Trigonometric Expressions</span><span>Transformations of Sinusoidal Functions</span><span>Compound and Double Angle Formulas</span><span>Trigonometric Identities</span><span>Trigonometric Equations</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">3</span> Exponential &amp; Logarithmic Functions</div>
+                  <div class="unit-lesson-list"><span>Characteristics of Exponential Functions</span><span>Transformations of Logarithmic Functions</span><span>Properties of Logarithmic Functions</span><span>Solving Exponential Equations</span><span>Solving Logarithmic Equations</span><span>Applications of Functions</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">4</span> Characteristics of Functions</div>
+                  <div class="unit-lesson-list"><span>Sums and Differences of Functions</span><span>Products and Quotients of Functions</span><span>Composition of Functions</span><span>Rate of Change</span></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="course-item" data-search="mdm4u mathematics data management 12" onclick="toggleCourse(this)">
@@ -2145,6 +2191,31 @@
           <div class="course-units">
             <div class="course-desc">应用数学方法分析数据，为商科、社会科学等领域的统计学习打下基础。</div>
             <div class="unit-tags"><span class="unit-tag">计数与概率</span><span class="unit-tag">数据组织</span><span class="unit-tag">统计分析</span><span class="unit-tag">概率分布</span><span class="unit-tag">综合数据调查</span></div>
+            <div class="course-detail">
+              <div class="course-detail-desc">This course broadens students' understanding of mathematics as it relates to managing data. Students will apply methods for organizing and analysing large amounts of information; solve problems involving probability and statistics; and carry out a culminating investigation that integrates statistical concepts and skills. Students planning to enter university programs in business, the social sciences, and the humanities will find this course of particular interest.</div>
+              <div class="unit-detail-list">
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">1</span> Counting and Probability</div>
+                  <div class="unit-lesson-list"><span>Organized Counting</span><span>Permutations</span><span>Pascal's Triangle and its Applications</span><span>Venn Diagrams and Sets</span><span>Combinations</span><span>The Binomial Theorem and the General Term</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">2</span> Organization of Data</div>
+                  <div class="unit-lesson-list"><span>Constructing and Interpreting Visual Display of Data</span><span>Sampling Techniques</span><span>Bias and Surveys</span><span>Collecting Data using Technology</span><span>Careers involving Statistics</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">3</span> Statistical Analysis</div>
+                  <div class="unit-lesson-list"><span>Measures of Central Tendency and Standard Deviation</span><span>Scatter Plots and Linear Correlation</span><span>The Correlation Coefficient</span><span>Linear Regression</span><span>Cause and Effect</span><span>Measures of Dispersion</span><span>Validity of Data</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">4</span> Probability Distributions</div>
+                  <div class="unit-lesson-list"><span>Basic Probability Concepts</span><span>General Probability Distributions</span><span>The Binomial Distribution</span><span>The Hypergeometric Distribution</span><span>Continuous Probability and the Normal Distributions</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">5</span> Culminating Data Management Investigation</div>
+                  <div class="unit-lesson-list"><span>Conducting the Data Analysis</span><span>Written Report</span><span>Final Presentation</span></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="course-item" data-search="mcv4u calculus vectors 12" onclick="toggleCourse(this)">
@@ -2156,6 +2227,23 @@
           <div class="course-units">
             <div class="course-desc">研究变化率与向量几何，为大学理工科专业奠定数学基础。</div>
             <div class="unit-tags"><span class="unit-tag">变化率</span><span class="unit-tag">导数及应用</span><span class="unit-tag">向量几何与代数</span></div>
+            <div class="course-detail">
+              <div class="course-detail-desc">This course builds on students' previous experience with functions and their developing understanding of rates of change. Students will solve problems involving geometric and algebraic representations of vectors and representations of lines and planes in three-dimensional space; broaden their understanding of rates of change to include the derivatives of polynomial, sinusoidal, exponential, rational, and radical functions; and apply these concepts and skills to the modelling of real-world relationships.</div>
+              <div class="unit-detail-list">
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">1</span> Rate of Change</div>
+                  <div class="unit-lesson-list"><span>Instantaneous Rate of Change</span><span>Concept of Limits</span><span>Applying the Limits</span><span>Exploring Derivatives</span><span>The Chain Rule</span><span>Derivatives of Trigonometric Functions</span><span>Derivatives of Exponential Functions</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">2</span> Derivatives and their Applications</div>
+                  <div class="unit-lesson-list"><span>Higher-Order Derivatives</span><span>Extreme Values</span><span>Optimization</span><span>Concavity</span><span>Curve Sketching</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">3</span> Geometry and Algebra of Vectors</div>
+                  <div class="unit-lesson-list"><span>Geometric Vectors</span><span>Cartesian Vectors</span><span>Cross Product and its Properties</span><span>Equations of Lines</span><span>Equations of Planes</span><span>Relationships Between Points, Lines and Planes</span></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -2210,6 +2298,31 @@
           <div class="course-units">
             <div class="course-desc">深入研究生物系统中的概念和过程，涵盖生物化学、代谢、分子遗传学、稳态和种群动态。</div>
             <div class="unit-tags"><span class="unit-tag">生物化学</span><span class="unit-tag">代谢过程</span><span class="unit-tag">分子遗传学</span><span class="unit-tag">稳态</span><span class="unit-tag">种群动态</span></div>
+            <div class="course-detail">
+              <div class="course-detail-desc">This course provides students with the opportunity for in-depth study of the concepts and processes that occur in biological systems. Students will study theory and conduct investigations in the areas of biochemistry, metabolic processes, molecular genetics, homeostasis, and population dynamics. Emphasis will be placed on the achievement of detailed knowledge and the refinement of skills needed for further study in various branches of the life sciences and related fields.</div>
+              <div class="unit-detail-list">
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">1</span> Biochemistry</div>
+                  <div class="unit-lesson-list"><span>The Cell</span><span>Cell Membranes</span><span>Biological Molecules</span><span>Enzymes &amp; Cellular Reactions</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">2</span> Metabolic Processes</div>
+                  <div class="unit-lesson-list"><span>Energy in the Cell</span><span>Cellular Respiration</span><span>Photosynthesis</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">3</span> Molecular Genetics</div>
+                  <div class="unit-lesson-list"><span>Genetic History &amp; Structure</span><span>DNA Replication &amp; Repair</span><span>Transcription</span><span>Translation</span><span>Gene Expression Regulation &amp; Mutation</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">4</span> Homeostasis</div>
+                  <div class="unit-lesson-list"><span>Homeostasis</span><span>Excretory System</span><span>Endocrine System</span><span>Nervous System</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">5</span> Population Dynamics</div>
+                  <div class="unit-lesson-list"><span>Population Dynamics</span><span>Population Growth</span><span>Human Population and Human Impacts</span></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="course-item" data-search="sch3u chemistry 11" onclick="toggleCourse(this)">
@@ -2232,6 +2345,31 @@
           <div class="course-units">
             <div class="course-desc">深化对有机化学、物质结构与性质、能量变化与反应速率、化学平衡和电化学的理解。</div>
             <div class="unit-tags"><span class="unit-tag">物质结构与性质</span><span class="unit-tag">有机化学</span><span class="unit-tag">能量变化与反应速率</span><span class="unit-tag">化学平衡</span><span class="unit-tag">电化学</span></div>
+            <div class="course-detail">
+              <div class="course-detail-desc">This course enables students to deepen their understanding of chemistry through the study of organic chemistry, the structure and properties of matter, energy changes and rates of reaction, equilibrium in chemical systems, and electrochemistry. Students will further develop their problem-solving and investigation skills as they investigate chemical processes, and will refine their ability to communicate scientific information. Emphasis will be placed on the importance of chemistry in everyday life and on evaluating the impact of chemical technology on the environment.</div>
+              <div class="unit-detail-list">
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">1</span> Structure &amp; Properties of Matter</div>
+                  <div class="unit-lesson-list"><span>Atomic Structure</span><span>Quantum Mechanical Model of the Atom</span><span>Electron Configuration &amp; Blocks of the Periodic Table</span><span>3-D Shapes: VSEPR</span><span>Polarity: Bonds and Molecules</span><span>Structure and Properties of Matter</span><span>Nanotechnology</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">2</span> Organic Chemistry</div>
+                  <div class="unit-lesson-list"><span>Introduction to Organic Chemistry</span><span>Naming &amp; Drawing Organic Compounds</span><span>Properties of Organic Compounds</span><span>Organic Chemistry Reactions</span><span>Organic Compounds: Environmental Impact</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">3</span> Energy Changes &amp; Rates of Reaction</div>
+                  <div class="unit-lesson-list"><span>Energy Changes</span><span>Changes in Enthalpy</span><span>Hess' Law</span><span>Rates of Reaction</span><span>Environmental Applications</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">4</span> Chemical Systems &amp; Equilibrium</div>
+                  <div class="unit-lesson-list"><span>Chemical Equilibrium</span><span>Equilibrium Constants</span><span>Acids &amp; Bases</span><span>Equilibrium in the World</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">5</span> Electrochemistry</div>
+                  <div class="unit-lesson-list"><span>Electrochemistry</span><span>Balancing Redox Reactions</span><span>Galvanic Cells</span><span>Environmental Impact of Electrochemistry</span></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="course-item" data-search="sph3u physics 11" onclick="toggleCourse(this)">
@@ -2254,6 +2392,31 @@
           <div class="course-units">
             <div class="course-desc">扩展物理知识，涵盖动力学、电场与磁场、光的波动性、量子力学和狭义相对论。</div>
             <div class="unit-tags"><span class="unit-tag">Dynamics</span><span class="unit-tag">Energy &amp; Momentum</span><span class="unit-tag">Gravitational, Electric &amp; Magnetic Fields</span><span class="unit-tag">Wave Nature of Light</span><span class="unit-tag">Quantum Mechanics &amp; Special Relativity</span></div>
+            <div class="course-detail">
+              <div class="course-detail-desc">This course enables students to deepen their understanding of physics concepts and theories. Students will continue their exploration of energy transformations and the forces that affect motion, and will investigate electrical, gravitational, and magnetic fields and electromagnetic radiation. Students will also explore the wave nature of light, quantum mechanics, and special relativity, and consider the impact of technological applications of physics on society and the environment.</div>
+              <div class="unit-detail-list">
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">1</span> Dynamics</div>
+                  <div class="unit-lesson-list"><span>Vectors &amp; Kinematics Review</span><span>Projectile &amp; Relative Motion</span><span>Forces &amp; Free Body Diagrams</span><span>Forces In Action</span><span>Uniform Circular Motion</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">2</span> Energy &amp; Momentum</div>
+                  <div class="unit-lesson-list"><span>Work &amp; Energy</span><span>Elastic Materials</span><span>Momentum &amp; Impulse</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">3</span> Gravitational, Electric &amp; Magnetic Fields</div>
+                  <div class="unit-lesson-list"><span>Gravitational Fields</span><span>Electric Fields</span><span>Magnetic Fields</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">4</span> Wave Nature of Light</div>
+                  <div class="unit-lesson-list"><span>Waves</span><span>Wave Interference</span><span>Diffraction &amp; Interference</span><span>Dispersion &amp; Refraction</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">5</span> Quantum Mechanics &amp; Special Relativity</div>
+                  <div class="unit-lesson-list"><span>Wave-Particle Duality</span><span>Einstein's Theory of Special Relativity</span><span>Exploring Modern Physics</span></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="course-item" data-search="hfa4u nutrition health 12" onclick="toggleCourse(this)">
@@ -2286,6 +2449,35 @@
           <div class="course-units">
             <div class="course-desc">发展文学素养、沟通和批判性思维技能。分析来自不同时期、国家和文化的文学文本。</div>
             <div class="unit-tags"><span class="unit-tag">What is Your Story?</span><span class="unit-tag">Between Lines</span><span class="unit-tag">Medium is the Message</span><span class="unit-tag">Be a Better You</span><span class="unit-tag">Voice in the Abyss</span><span class="unit-tag">Communicating in Today's World</span></div>
+            <div class="course-detail">
+              <div class="course-detail-desc">This course emphasizes the development of literacy, communication, and critical and creative thinking skills necessary for success in academic and daily life. Students will analyse challenging literary texts from various periods, countries, and cultures, as well as a range of informational and graphic texts, and create oral, written, and media texts in a variety of forms. An important focus will be on using language with precision and clarity and incorporating stylistic devices appropriately and effectively.</div>
+              <div class="unit-detail-list">
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">1</span> What is Your Story?</div>
+                  <div class="unit-lesson-list"><span>Perspectives</span><span>Voices</span><span>Strength of Diversity</span><span>Unit Highlights</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">2</span> Between Lines</div>
+                  <div class="unit-lesson-list"><span>Survive and Thrive</span><span>Opinions</span><span>A Hero's Shield</span><span>Unit Highlights</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">3</span> Medium is the Message</div>
+                  <div class="unit-lesson-list"><span>No Woman No Cry</span><span>To This Day</span><span>Fiddler on the Roof</span><span>Unit Highlights</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">4</span> Be a Better You</div>
+                  <div class="unit-lesson-list"><span>Challenging Ignorance</span><span>Fail Forward</span><span>Get Up, Stand Up</span><span>Unit Highlights</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">5</span> Voice in the Abyss</div>
+                  <div class="unit-lesson-list"><span>Storytelling in the Internet Age</span><span>Telling Real Stories - The News</span><span>The Future of Storytelling</span><span>Unit Highlights</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">6</span> Communicating in Today's World</div>
+                  <div class="unit-lesson-list"><span>Modern Communication</span><span>Presenting Your Ideas</span><span>21st Century Communication Skills</span><span>Unit Highlights</span></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="course-item" data-search="eng4u english 12" onclick="toggleCourse(this)">
@@ -2297,6 +2489,35 @@
           <div class="course-units">
             <div class="course-desc">巩固文学素养、沟通和批判性创造性思维技能，分析来自不同时期、国家和文化的文学作品。</div>
             <div class="unit-tags"><span class="unit-tag">From Me to We</span><span class="unit-tag">Hear Me Roar</span><span class="unit-tag">One Step at a Time</span><span class="unit-tag">The Stories We Love</span><span class="unit-tag">Essays</span><span class="unit-tag">Stories on the Big Screen</span></div>
+            <div class="course-detail">
+              <div class="course-detail-desc">This course emphasizes the consolidation of the literacy, communication, and critical and creative thinking skills necessary for success in academic and daily life. Students will analyse a range of challenging literary texts from various periods, countries, and cultures; interpret and evaluate informational and graphic texts; and create oral, written, and media texts in a variety of forms. An important focus will be on using academic language coherently and confidently, selecting the reading strategies best suited to particular texts and purposes for reading, and developing greater control in writing.</div>
+              <div class="unit-detail-list">
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">1</span> From Me to We</div>
+                  <div class="unit-lesson-list"><span>Use Your Voice</span><span>Global Awareness</span><span>Take Note</span><span>Unit Highlights</span><span>In-Class Writing Summative</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">2</span> Hear Me Roar</div>
+                  <div class="unit-lesson-list"><span>Centre Stage</span><span>Audio-Visual Presentations</span><span>Dream Big</span><span>Unit Highlights</span><span>In-Class Writing Summative</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">3</span> One Step at a Time</div>
+                  <div class="unit-lesson-list"><span>Connections</span><span>Self-Editing</span><span>Put It All Together</span><span>Unit Highlights</span><span>Oral Presentation</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">4</span> The Stories We Love</div>
+                  <div class="unit-lesson-list"><span>Analyzing Fiction</span><span>The When and Where of Great Stories</span><span>The Characters We Love</span><span>Unit Highlights</span><span>In-Class Writing Summative</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">5</span> Essays</div>
+                  <div class="unit-lesson-list"><span>Planning the Essay</span><span>Writing the Essay</span><span>Improving the Essay</span><span>Unit Highlights</span><span>Final Project Plan</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">6</span> Stories on the Big Screen</div>
+                  <div class="unit-lesson-list"><span>Novels on the Big Screen</span><span>Promoting the Movie</span><span>Finding Your Voice</span><span>Unit Highlights</span></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="course-item" data-search="esleo esl level 5" onclick="toggleCourse(this)">
@@ -2394,6 +2615,27 @@
           <div class="course-units">
             <div class="course-desc">从多元视角分析加拿大和国际经济问题，探讨全球化、贸易协定、宏观经济政策等议题。</div>
             <div class="unit-tags"><span class="unit-tag">经济学基础</span><span class="unit-tag">企业、市场与利益相关者</span><span class="unit-tag">宏观经济学</span><span class="unit-tag">全球相互依存与不平等</span></div>
+            <div class="course-detail">
+              <div class="course-detail-desc">This course examines current Canadian and international economic issues, developments, policies, and practices from diverse perspectives. Students will explore the decisions that individuals and institutions, including governments, make in response to economic issues such as globalization, trade agreements, economic disparities, regulation, and environmental sustainability. Students will apply the concepts of economic thinking and the economic inquiry process to investigate, and develop informed opinions about, economic trade-offs, growth, and sustainability.</div>
+              <div class="unit-detail-list">
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">1</span> Fundamentals of Economics</div>
+                  <div class="unit-lesson-list"><span>Scarcity and Choice</span><span>Supply and Demand Models</span><span>Growth and Sustainability</span><span>Economic Thought and Decision Making</span><span>Case Study</span><span>Summative Assignment</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">2</span> Firms, Markets and Economic Stakeholders</div>
+                  <div class="unit-lesson-list"><span>The Firm and Market Structures</span><span>Economic Trade-Offs and Decisions</span><span>The Role of Government in Redressing Imbalance</span><span>Firms, Markets and Stakeholders in Canada</span><span>Case Study</span><span>Summative Assignment</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">3</span> Macroeconomics</div>
+                  <div class="unit-lesson-list"><span>Macroeconomic Models and Measures</span><span>Fiscal Policy</span><span>Monetary Policy</span><span>Canadian Economic Policy</span><span>Case Study</span><span>Summative Assignment</span></div>
+                </div>
+                <div class="unit-detail-item">
+                  <div class="unit-detail-title"><span class="unit-num">4</span> Global Interdependence and Inequality</div>
+                  <div class="unit-lesson-list"><span>Theories and Models of International Trade</span><span>International Economic Developments</span><span>International Economic Power and Inequality</span><span>Canada as a Global Economy</span><span>Case Study</span><span>Summative Assignment</span></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="course-item" data-search="gwl3o designing your future 11" onclick="toggleCourse(this)">
