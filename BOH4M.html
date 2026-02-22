@@ -543,6 +543,49 @@
       border-radius: 0 6px 6px 0;
       font-style: italic;
     }
+    
+    /* Quizlet cards */
+    .quizlet-card { padding: 0; }
+    .quizlet-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .quizlet-icon { font-size: 20px; line-height: 1; }
+    .quizlet-title { font-size: 15px; font-weight: 700; color: var(--primary); }
+    .quizlet-link {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 14px;
+      background: #4255ff;
+      color: white;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .quizlet-link:hover { background: #3344dd; }
+    .quizlet-terms { display: flex; flex-wrap: wrap; gap: 8px; }
+    .quizlet-terms .vocab-tag {
+      background: #eef2ff;
+      color: #3730a3;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid #c7d2fe;
+      transition: all .2s;
+    }
+    .quizlet-terms .vocab-tag:hover {
+      background: #4255ff;
+      color: white;
+      border-color: #4255ff;
+    }
     /* Override Moodle inline styles that might conflict */
     .page-content-inner span[style*="font-size: x-large"],
     .page-content-inner span[style*="font-size: xx-large"] {
@@ -1221,52 +1264,20 @@
             <span class="vocab-tag">Ethical Dilemma</span>
             <span class="vocab-tag">Whistleblower</span>
           </div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 1-1: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span>   <br /></span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table style="border: 0px solid #4303fb; background-color: #4303fb; margin-left: 30px; width: 90%;" 90="" margin-left:="" 30px="" height:="" 104px="" class="img-rounded" cellspacing="6" cellpadding="6" border="0" align="left">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"> </span></td>
-<td style="margin-left: 30px;">
-<p><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p><span style="color: #ffffff;"><span style="font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;"><span style="font-size: medium;"><span style="font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; font-size: medium;" id="yui_3_17_2_1_1541531337444_1584"><strong id="yui_3_17_2_1_1541531337444_1583">Quizlets</strong> are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations. </span></span></span><span style="font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;"><span style="font-size: medium;"><span style="font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;"><span style="font-size: medium;">Use the following Quizlet to help you review vocabulary and concepts in this lesson. Feel free to explore the different Flashcards, Test, and Gravity types.</span></span></span></span></span><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><span style="font-size: medium;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><span style="font-size: medium;"> </span></span></span><br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"> </span></p>
-<p style="margin-left: 30px;"><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"> </span></span></p>
-<table border="0">
-<tbody>
-<tr>
-<td>
-<p style="margin-left: 30px;"></p>
-</td>
-</tr>
-<tr>
-<td>
-<p style="margin-left: 30px;"><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974">Code of Ethics</span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Ethics</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Ethical Behaviour</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Ethical Dilemma</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Whistleblower</span></li>
-</ul>
-</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-Click on <a href="https://quizlet.com/_51b1tc">1-1: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 1-1: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 1-1 Vocabulary</span>
+              <a href="https://quizlet.com/_51b1tc" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Code of Ethics</span>
+              <span class="vocab-tag">Ethics</span>
+              <span class="vocab-tag">Ethical Behaviour</span>
+              <span class="vocab-tag">Ethical Dilemma</span>
+              <span class="vocab-tag">Whistleblower</span>
+            </div>
+          </div></div></details>
           <div class="log-ref">Learning Log: 1-1 (Target: 4 hours) &mdash; Questionnaire</div>
         </div>
       </div>
@@ -1276,36 +1287,22 @@ Click on <a href="https://quizlet.com/_51b1tc">1-1: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">2</div>
           <div class="lesson-title">1-2: Management Fundamentals <span class="lesson-hours">(3 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 1-2: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/974927/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;">Administrator</span></li>
-<li><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;">Functional Managers</span></li>
-<li><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;">General Managers</span></li>
-<li><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;">Line Manager</span></li>
-<li><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;">Management</span></li>
-<li><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;">Organization</span></li>
-<li><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;">Staff Manager</span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51b1tc">1-2: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 1-2: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 1-2 Vocabulary</span>
+              <a href="https://quizlet.com/_51b1tc" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Administrator</span>
+              <span class="vocab-tag">Functional Managers</span>
+              <span class="vocab-tag">General Managers</span>
+              <span class="vocab-tag">Line Manager</span>
+              <span class="vocab-tag">Management</span>
+              <span class="vocab-tag">Organization</span>
+              <span class="vocab-tag">Staff Manager</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -2285,33 +2282,19 @@ Click on <a href="https://quizlet.com/_51b1tc">1-2: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">3</div>
           <div class="lesson-title">1-3: Management Theories &amp; Corporate Culture <span class="lesson-hours">(2 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 1-3: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/974993/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Corporate Culture</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Management Theories</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Maslow's Hierarchy of Needs</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">System</span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51b1tc">1-3: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 1-3: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 1-3 Vocabulary</span>
+              <a href="https://quizlet.com/_51b1tc" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Corporate Culture</span>
+              <span class="vocab-tag">Management Theories</span>
+              <span class="vocab-tag">Maslow's Hierarchy of Needs</span>
+              <span class="vocab-tag">System</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -2675,42 +2658,28 @@ Click on <a href="https://quizlet.com/_51b1tc">1-3: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">4</div>
           <div class="lesson-title">1-4: Ethics &amp; Social Responsibility <span class="lesson-hours">(2 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 1-4: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: x-large; color: #3246d7;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/975065/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Auditing</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Bankruptcy</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">CSR</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Debt</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Depreciation</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Fraud</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Inflation</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Loan</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Stakeholder</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">SEC</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">S</span><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">ocial Responsibility</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Stock</span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Stockholder</span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51b1tc">1-4: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 1-4: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 1-4 Vocabulary</span>
+              <a href="https://quizlet.com/_51b1tc" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Auditing</span>
+              <span class="vocab-tag">Bankruptcy</span>
+              <span class="vocab-tag">CSR</span>
+              <span class="vocab-tag">Debt</span>
+              <span class="vocab-tag">Depreciation</span>
+              <span class="vocab-tag">Fraud</span>
+              <span class="vocab-tag">Inflation</span>
+              <span class="vocab-tag">Loan</span>
+              <span class="vocab-tag">Stakeholder</span>
+              <span class="vocab-tag">SEC</span>
+              <span class="vocab-tag">Social Responsibility</span>
+              <span class="vocab-tag">Stock</span>
+              <span class="vocab-tag">Stockholder</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -3411,30 +3380,16 @@ Click on <a href="https://quizlet.com/_51b1tc">1-4: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">5</div>
           <div class="lesson-title">1-5: Business Communication <span class="lesson-hours">(2 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 1-5: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/975116/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following word:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span face="Trebuchet MS, Verdana, Arial, Helvetica, sans-serif" size="3" style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">Business Communication</span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51b1tc">1-5: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 1-5: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 1-5 Vocabulary</span>
+              <a href="https://quizlet.com/_51b1tc" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Business Communication</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -4120,35 +4075,21 @@ Click on <a href="https://quizlet.com/_51b1tc">1-5: Vocabulary Quizlet</a> to op
             <span class="vocab-tag">Skill</span>
             <span class="vocab-tag">Transformational Leadership</span>
           </div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 2-1: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/975236/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>CEO</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Characteristic</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Infographic</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Leader</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Skill</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Transformational Leadership</span></span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51ck6p">2-1: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 2-1: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 2-1 Vocabulary</span>
+              <a href="https://quizlet.com/_51ck6p" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">CEO</span>
+              <span class="vocab-tag">Characteristic</span>
+              <span class="vocab-tag">Infographic</span>
+              <span class="vocab-tag">Leader</span>
+              <span class="vocab-tag">Skill</span>
+              <span class="vocab-tag">Transformational Leadership</span>
+            </div>
+          </div></div></details>
           <div class="log-ref">Learning Log: 2-1 (Target: 3 hours) &mdash; Questionnaire</div>
         </div>
       </div>
@@ -4158,36 +4099,22 @@ Click on <a href="https://quizlet.com/_51ck6p">2-1: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">2</div>
           <div class="lesson-title">2-2: Understanding Human Behaviour <span class="lesson-hours">(2 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 2-2: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span>  </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span>  </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/975326/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Absenteeism</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Attitude</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Cognitive Dissonance</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Morale</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Optimist</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>P</span></span></span><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974">ersonality Test</span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974">Pessimist</span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51ck6p">2-2: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 2-2: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 2-2 Vocabulary</span>
+              <a href="https://quizlet.com/_51ck6p" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Absenteeism</span>
+              <span class="vocab-tag">Attitude</span>
+              <span class="vocab-tag">Cognitive Dissonance</span>
+              <span class="vocab-tag">Morale</span>
+              <span class="vocab-tag">Optimist</span>
+              <span class="vocab-tag">Personality Test</span>
+              <span class="vocab-tag">Pessimist</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -6069,30 +5996,16 @@ Click on <a href="https://quizlet.com/_51ck6p">2-2: Vocabulary Quizlet</a> to op
           <div class="vocab-box">
             <span class="vocab-tag">Leadership Style</span>
           </div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 2-3: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/975410/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following word:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Leadership Style</span></span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51ck6p">2-3: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 2-3: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 2-3 Vocabulary</span>
+              <a href="https://quizlet.com/_51ck6p" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Leadership Style</span>
+            </div>
+          </div></div></details>
           <div class="log-ref">Learning Log: 2-3 (Target: 4 hours) &mdash; Questionnaire</div>
         </div>
       </div>
@@ -6102,35 +6015,21 @@ Click on <a href="https://quizlet.com/_51ck6p">2-3: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">4</div>
           <div class="lesson-title">2-4: Group Dynamics <span class="lesson-hours">(3 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 2-4: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="" class="img-rounded">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/975494/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span>Crew</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span>Disruptors</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span>Initiators</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span>Responders</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span>Standing Team</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span>Task Force<br /></span></span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51ck6p">2-4: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 2-4: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 2-4 Vocabulary</span>
+              <a href="https://quizlet.com/_51ck6p" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Crew</span>
+              <span class="vocab-tag">Disruptors</span>
+              <span class="vocab-tag">Initiators</span>
+              <span class="vocab-tag">Responders</span>
+              <span class="vocab-tag">Standing Team</span>
+              <span class="vocab-tag">Task Force</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -8628,42 +8527,28 @@ Click on <a href="https://quizlet.com/_51ck6p">2-4: Vocabulary Quizlet</a> to op
             <span class="vocab-tag">Projection</span>
             <span class="vocab-tag">Stereotyping</span>
           </div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 3-1: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: x-large; color: #3246d7;"><strong><span><span>  </span></span></strong></span></p>
-<p><span style="font-size: x-large; color: #3246d7;"><strong><span><span>  </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/975602/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Ambiguity</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Channel Richness</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Communication Barrier</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Cultural Misunderstanding</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Filtering</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Hearing</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Information Overload</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Jargon</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Listening</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Noise</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Perception</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Projection</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Stereotyping</span></span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cpbf">3-1: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 3-1: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 3-1 Vocabulary</span>
+              <a href="https://quizlet.com/_51cpbf" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Ambiguity</span>
+              <span class="vocab-tag">Channel Richness</span>
+              <span class="vocab-tag">Communication Barrier</span>
+              <span class="vocab-tag">Cultural Misunderstanding</span>
+              <span class="vocab-tag">Filtering</span>
+              <span class="vocab-tag">Hearing</span>
+              <span class="vocab-tag">Information Overload</span>
+              <span class="vocab-tag">Jargon</span>
+              <span class="vocab-tag">Listening</span>
+              <span class="vocab-tag">Noise</span>
+              <span class="vocab-tag">Perception</span>
+              <span class="vocab-tag">Projection</span>
+              <span class="vocab-tag">Stereotyping</span>
+            </div>
+          </div></div></details>
           <div class="log-ref">Learning Log: 3-1 (Target: 2 hours) &mdash; Questionnaire</div>
         </div>
       </div>
@@ -8673,35 +8558,21 @@ Click on <a href="https://quizlet.com/_51cpbf">3-1: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">2</div>
           <div class="lesson-title">3-2: Stress &amp; De-Stressing <span class="lesson-hours">(3 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 3-2: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/975665/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span id="yui_3_17_2_1_1532543123910_1288"><span id="yui_3_17_2_1_1532543123910_1287">Eustress</span></span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span id="yui_3_17_2_1_1532543123910_1288"><span id="yui_3_17_2_1_1532543123910_1287">Distress</span></span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span id="yui_3_17_2_1_1532543123910_1288"><span id="yui_3_17_2_1_1532543123910_1287">Optimal Performance Point</span></span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span id="yui_3_17_2_1_1532543123910_1288"><span id="yui_3_17_2_1_1532543123910_1287">Stress</span></span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Stressor</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Wellness Program</span></span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cpbf">3-2: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 3-2: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 3-2 Vocabulary</span>
+              <a href="https://quizlet.com/_51cpbf" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Eustress</span>
+              <span class="vocab-tag">Distress</span>
+              <span class="vocab-tag">Optimal Performance Point</span>
+              <span class="vocab-tag">Stress</span>
+              <span class="vocab-tag">Stressor</span>
+              <span class="vocab-tag">Wellness Program</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -8928,30 +8799,16 @@ Click on <a href="https://quizlet.com/_51cpbf">3-2: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">3</div>
           <div class="lesson-title">3-3: Conflict &amp; Its Management <span class="lesson-hours">(2 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 3-3: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: x-large; color: #3246d7;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/975722/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following word:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"> Conflict Management Style</span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cpbf">3-3: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 3-3: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 3-3 Vocabulary</span>
+              <a href="https://quizlet.com/_51cpbf" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Conflict Management Style</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -9734,30 +9591,16 @@ Click on <a href="https://quizlet.com/_51cpbf">3-3: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">4</div>
           <div class="lesson-title">3-4: Motivation <span class="lesson-hours">(2 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 3-4: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/975761/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following word:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"> Motivation Theory</span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cpbf">3-4: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 3-4: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 3-4 Vocabulary</span>
+              <a href="https://quizlet.com/_51cpbf" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Motivation Theory</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -10642,31 +10485,17 @@ Click on <a href="https://quizlet.com/_51cpbf">3-4: Vocabulary Quizlet</a> to op
             <span class="vocab-tag">Planning</span>
             <span class="vocab-tag">The Planning Process</span>
           </div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 4-1: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: x-large; color: #3246d7;"><strong><span><span>  </span></span></strong></span></p>
-<p><span style="font-size: x-large; color: #3246d7;"><strong><span><span>  </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/975875/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Planning</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>The Planning Process</span></span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cvbk">4-1: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 4-1: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 4-1 Vocabulary</span>
+              <a href="https://quizlet.com/_51cvbk" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Planning</span>
+              <span class="vocab-tag">The Planning Process</span>
+            </div>
+          </div></div></details>
           <div class="log-ref">Learning Log: 4-1 (Target: 2 hours) &mdash; Questionnaire</div>
         </div>
       </div>
@@ -10676,34 +10505,20 @@ Click on <a href="https://quizlet.com/_51cvbk">4-1: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">2</div>
           <div class="lesson-title">4-2: Planning Tools and Techniques <span class="lesson-hours">(2 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 4-2: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: x-large; color: #3246d7;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/975914/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Benchmarking</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Contingency Planning</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Groupthink</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Participatory Planning</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Scenario Planning</span></span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cvbk">4-2: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 4-2: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 4-2 Vocabulary</span>
+              <a href="https://quizlet.com/_51cvbk" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Benchmarking</span>
+              <span class="vocab-tag">Contingency Planning</span>
+              <span class="vocab-tag">Groupthink</span>
+              <span class="vocab-tag">Participatory Planning</span>
+              <span class="vocab-tag">Scenario Planning</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -10829,35 +10644,21 @@ Click on <a href="https://quizlet.com/_51cvbk">4-2: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">3</div>
           <div class="lesson-title">4-3: Strategic Planning <span class="lesson-hours">(2 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 4-3: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/975968/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Business Reach</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Concentric Diversification</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Conglomeration</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Growth Strategy</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Mission Statement</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Retrenchment</span></span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cvbk">4-3: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 4-3: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 4-3 Vocabulary</span>
+              <a href="https://quizlet.com/_51cvbk" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Business Reach</span>
+              <span class="vocab-tag">Concentric Diversification</span>
+              <span class="vocab-tag">Conglomeration</span>
+              <span class="vocab-tag">Growth Strategy</span>
+              <span class="vocab-tag">Mission Statement</span>
+              <span class="vocab-tag">Retrenchment</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -11109,35 +10910,21 @@ Click on <a href="https://quizlet.com/_51cvbk">4-3: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">4</div>
           <div class="lesson-title">4-4: Analyzing Organization's Strategic Plans <span class="lesson-hours">(4 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 4-4: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/976043/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>BCG Matrix</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Cash Cow</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>PEST Analysis</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Question Mark</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Star</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>SWOT Analysis</span></span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cvbk">4-4: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 4-4: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 4-4 Vocabulary</span>
+              <a href="https://quizlet.com/_51cvbk" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">BCG Matrix</span>
+              <span class="vocab-tag">Cash Cow</span>
+              <span class="vocab-tag">PEST Analysis</span>
+              <span class="vocab-tag">Question Mark</span>
+              <span class="vocab-tag">Star</span>
+              <span class="vocab-tag">SWOT Analysis</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -11999,30 +11786,16 @@ Click on <a href="https://quizlet.com/_51cvbk">4-4: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">5</div>
           <div class="lesson-title">4-5: Planning for Change <span class="lesson-hours">(2 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 4-5: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/976112/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following word:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974">Chunking </span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cvbk">4-5: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 4-5: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 4-5 Vocabulary</span>
+              <a href="https://quizlet.com/_51cvbk" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Chunking</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -12668,39 +12441,25 @@ Click on <a href="https://quizlet.com/_51cvbk">4-5: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">6</div>
           <div class="lesson-title">4-6: Control Processes and Systems <span class="lesson-hours">(3 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 4-6: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/976181/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Acceptable Situation</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Control</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Control Process</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Increased Autonomy</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Input Standards</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Opportunity Situation</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Output Standards</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Performance Based Compensation</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Problem Situation</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Progressive Discipline</span></span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cvbk">4-6: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 4-6: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 4-6 Vocabulary</span>
+              <a href="https://quizlet.com/_51cvbk" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Acceptable Situation</span>
+              <span class="vocab-tag">Control</span>
+              <span class="vocab-tag">Control Process</span>
+              <span class="vocab-tag">Increased Autonomy</span>
+              <span class="vocab-tag">Input Standards</span>
+              <span class="vocab-tag">Opportunity Situation</span>
+              <span class="vocab-tag">Output Standards</span>
+              <span class="vocab-tag">Performance Based Compensation</span>
+              <span class="vocab-tag">Problem Situation</span>
+              <span class="vocab-tag">Progressive Discipline</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -13653,30 +13412,16 @@ Click on <a href="https://quizlet.com/_51cvbk">4-6: Vocabulary Quizlet</a> to op
           <div class="vocab-box">
             <span class="vocab-tag">Organizational Structures</span>
           </div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 5-1: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/976301/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following word:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"> Organizational Structures</span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cvgx">5-1: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 5-1: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 5-1 Vocabulary</span>
+              <a href="https://quizlet.com/_51cvgx" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Organizational Structures</span>
+            </div>
+          </div></div></details>
           <div class="log-ref">Learning Log: 5-1 (Target: 3 hours) &mdash; Questionnaire</div>
         </div>
       </div>
@@ -13686,30 +13431,16 @@ Click on <a href="https://quizlet.com/_51cvgx">5-1: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">2</div>
           <div class="lesson-title">5-2: Organizational Design <span class="lesson-hours">(2 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 5-2: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: x-large; color: #3246d7;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/976346/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following word:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Organic Organizational Structure</span></span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cvgx">5-2: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 5-2: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 5-2 Vocabulary</span>
+              <a href="https://quizlet.com/_51cvgx" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Organic Organizational Structure</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -13837,43 +13568,29 @@ Click on <a href="https://quizlet.com/_51cvgx">5-2: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">3</div>
           <div class="lesson-title">5-3: Organizing the Work Environment <span class="lesson-hours">(3 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 5-3: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/976409/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Bankable Days</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Compressed Workweeks</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Contract Work</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Employee-Employer Relationships</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Flextime</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Job Enlargement</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Job Enrichment</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>J</span></span></span><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974">ob Rotation</span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974">Job Sharing</span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974">Job Simplification</span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974">Off Site Work</span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974">Psychological Contract</span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974">Self-Managed Teams</span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974">Shift Work Maximums</span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cvgx">5-3: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 5-3: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 5-3 Vocabulary</span>
+              <a href="https://quizlet.com/_51cvgx" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Bankable Days</span>
+              <span class="vocab-tag">Compressed Workweeks</span>
+              <span class="vocab-tag">Contract Work</span>
+              <span class="vocab-tag">Employee-Employer Relationships</span>
+              <span class="vocab-tag">Flextime</span>
+              <span class="vocab-tag">Job Enlargement</span>
+              <span class="vocab-tag">Job Enrichment</span>
+              <span class="vocab-tag">Job Rotation</span>
+              <span class="vocab-tag">Job Sharing</span>
+              <span class="vocab-tag">Job Simplification</span>
+              <span class="vocab-tag">Off Site Work</span>
+              <span class="vocab-tag">Psychological Contract</span>
+              <span class="vocab-tag">Self-Managed Teams</span>
+              <span class="vocab-tag">Shift Work Maximums</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -14939,30 +14656,16 @@ Click on <a href="https://quizlet.com/_51cvgx">5-3: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">5</div>
           <div class="lesson-title">5-5: Human Resource Strategies <span class="lesson-hours">(2 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 5-5: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/976529/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following word:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"> Stay Interview</span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cvgx">5-5: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 5-5: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 5-5 Vocabulary</span>
+              <a href="https://quizlet.com/_51cvgx" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">Stay Interview</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
@@ -15123,33 +14826,19 @@ Click on <a href="https://quizlet.com/_51cvgx">5-5: Vocabulary Quizlet</a> to op
         <div class="lesson-header" onclick="toggleLesson(this)">
           <div class="lesson-num">6</div>
           <div class="lesson-title">5-6: Performance Appraisals <span class="lesson-hours">(2 hours)</span></div>
-          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary style="font-size:13px;font-weight:600;color:var(--primary);"><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 5-6: Vocabulary Quizlet</summary><div class="page-content-inner"><p><span style="font-size: x-large; color: #3246d7;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span> </span></span></strong></span></p>
-<p><span style="font-size: large; color: #008000;"><strong><span><span></span></span></strong></span><span style="font-size: x-large; color: #3246d7;"><strong><span id="yui_3_17_2_1_1520613141682_1924"><span id="yui_3_17_2_1_1520613141682_1923"><i class="fa fa-soccer-ball-o fa-lg" aria-hidden="true"></i> Lesson Vocabulary</span></span></strong></span></p>
-<table cellspacing="8" cellpadding="8" border="0" style="border: 0px solid #4303fb; background-color: #4303fb;" 90="" margin-left:="" 30px="" height:="" 104px="">
-<tbody style="margin-left: 30px;">
-<tr style="margin-left: 30px;">
-<td style="margin-left: 30px;"><span style="font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><img src="https://ghs.rosedaleedu.com/pluginfile.php/976577/mod_url/intro/12cf620e6d2d894c0f11580c61b3879e_vocab-d-h-quiz-on-tinycards-vocabulary-quiz-clipart_1200-1200.png" style="display: block; margin-left: NaNpx; margin-right: NaNpx;" width="87" height="87" /></span></td>
-<td style="margin-left: 30px;">
-<p style="margin-left: 30px;"><span style="color: #ffff00; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;"><strong><span style="font-size: medium;">Quizlets</span></strong></span></p>
-<p style="margin-left: 30px;"><span style="color: #ffffff; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;">Use the following link to help you review vocabulary and concepts in this lesson. Feel free to explore the different modes on Quizlet such as Flashcards, Test, and Gravity. Quizlets are a great tool to help you  understand difficult concepts and prepare for unit tests and evaluations.<br /></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="margin-left: 30px;"></p>
-<p style="margin-left: 30px;"><span style="font-size: x-large;"><a href="https://ghs.rosedaleedu.com/gbf"></a></span><span style="font-size: medium; font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;"><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;">For this lesson, focus on the following words:</span></strong></span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>360 Degree Feedback</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Behaviourally Anchored Rating Scale (BARS)</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Comparison Method of Performance Appraisal</span></span></span></li>
-<li><span style="font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: medium;"><span id="yui_3_17_2_1_1532462167387_974"><span>Graph Rating Scale</span></span></span></li>
-</ul>
-</li>
-</ul>
-Click on <a href="https://quizlet.com/_51cvgx">5-6: Vocabulary Quizlet</a> to open the resource.</div></details>
+          <details class="page-expandable quizlet-expandable" style="margin-top:8px;"><summary><span class="act-badge url" style="background:#fef9c3;color:#854d0e;display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:6px;">Quizlet</span> 5-6: Vocabulary Quizlet</summary><div class="page-content-inner"><div class="quizlet-card">
+            <div class="quizlet-header">
+              <span class="quizlet-icon">&#x1F4DD;</span>
+              <span class="quizlet-title">Lesson 5-6 Vocabulary</span>
+              <a href="https://quizlet.com/_51cvgx" target="_blank" rel="noopener" class="quizlet-link">Open in Quizlet &rarr;</a>
+            </div>
+            <div class="quizlet-terms">
+              <span class="vocab-tag">360 Degree Feedback</span>
+              <span class="vocab-tag">Behaviourally Anchored Rating Scale (BARS)</span>
+              <span class="vocab-tag">Comparison Method of Performance Appraisal</span>
+              <span class="vocab-tag">Graph Rating Scale</span>
+            </div>
+          </div></div></details>
           <span class="lesson-toggle">&#9660;</span>
         </div>
         <div class="lesson-body">
