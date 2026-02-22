@@ -1,0 +1,24 @@
+services:
+  web:
+    image: ghcr.io/ranhao371-beep/rosedale-ossd-guide:latest
+    container_name: rosedale-site
+    restart: always
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: cf-tunnel
+    restart: always
+    command: tunnel --no-autoupdate run --token ${CF_TUNNEL_TOKEN}
+    depends_on:
+      - web
+
+  # Auto-update: checks for new image every hour
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_POLL_INTERVAL=3600
+    restart: always

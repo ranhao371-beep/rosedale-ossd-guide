@@ -2,3 +2,5 @@ data/
 *.js
 r1_main.html
 .claude/
+.env
+cookies*.txt
